@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Security: restrict where scripts/styles/forms can load from -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; form-action 'none'; frame-src https://app.runacall.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self'; form-action 'none'; frame-src https://app.runacall.com https://www.google.com https://maps.google.com; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Ice Peak Heating &amp; Cooling | Premium HVAC Services in Philadelphia, PA</title>
   <meta name="description" content="Ice Peak Heating & Cooling — Philadelphia's premium HVAC company. AC installation & repair, furnace service, heat pumps, duct cleaning and maintenance plans. Licensed & insured. Get a free estimate today.">
@@ -41,10 +41,23 @@
     "telephone": "+1-267-212-1682",
     "email": "service@icepeakhvac.com",
     "priceRange": "$$",
-    "address": { "@type": "PostalAddress", "addressLocality": "Philadelphia", "addressRegion": "PA", "addressCountry": "US" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "701 E Pennsylvania Blvd",
+      "addressLocality": "Feasterville-Trevose",
+      "addressRegion": "PA",
+      "postalCode": "19053",
+      "addressCountry": "US"
+    },
     "geo": { "@type": "GeoCoordinates", "latitude": 40.1498474, "longitude": -75.0111645 },
     "areaServed": "Greater Philadelphia, PA",
     "openingHours": "Mo-Su 00:00-23:59",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "2",
+      "bestRating": "5"
+    },
     "hasMap": "https://www.google.com/maps/place/Ice+Peak+Heating+and+Cooling/@40.1498474,-75.0111645,17z/data=!4m6!3m5!1s0x89c6adbe015d71bb:0x83d9dc05094df08b!8m2!3d40.1498474!4d-75.0111645!16s%2Fg%2F11ntnr27qq",
     "sameAs": [
       "https://www.google.com/maps/place/Ice+Peak+Heating+and+Cooling/@40.1498474,-75.0111645,17z/data=!4m6!3m5!1s0x89c6adbe015d71bb:0x83d9dc05094df08b!8m2!3d40.1498474!4d-75.0111645!16s%2Fg%2F11ntnr27qq"
@@ -83,6 +96,7 @@
 
       <ul class="hidden lg:flex items-center gap-8 text-sm font-medium text-slate-300">
         <li><a class="nav-link hover:text-white" href="#services">Services</a></li>
+        <li><a class="nav-link hover:text-white" href="#mascot">Peak</a></li>
         <li><a class="nav-link hover:text-white" href="#work">Our Work</a></li>
         <li><a class="nav-link hover:text-white" href="#about">About</a></li>
         <li><a class="nav-link hover:text-white" href="#testimonials">Reviews</a></li>
@@ -106,6 +120,7 @@
     <div id="mobile-menu" class="lg:hidden hidden border-t border-white/5 bg-navy-900/95 backdrop-blur-xl">
       <ul class="px-6 py-4 space-y-1 text-base font-medium">
         <li><a class="block py-3 border-b border-white/5 hover:text-ice-300" href="#services">Services</a></li>
+        <li><a class="block py-3 border-b border-white/5 hover:text-ice-300" href="#mascot">Peak</a></li>
         <li><a class="block py-3 border-b border-white/5 hover:text-ice-300" href="#work">Our Work</a></li>
         <li><a class="block py-3 border-b border-white/5 hover:text-ice-300" href="#about">About</a></li>
         <li><a class="block py-3 border-b border-white/5 hover:text-ice-300" href="#testimonials">Reviews</a></li>
@@ -121,7 +136,7 @@
 
     <!-- ======= HERO ======= -->
     <section class="relative min-h-[92vh] flex items-center overflow-hidden" aria-label="Hero">
-      <img src="assets/van-hero.jpg" alt="Ice Peak Heating & Cooling branded service van with fire and ice design, parked in a Philadelphia neighborhood" class="absolute inset-0 w-full h-full object-cover object-[70%_center]" fetchpriority="high">
+      <img src="assets/van-hero.jpg" alt="Ice Peak Heating & Cooling service van with ice-and-fire wrap, mascot, and phone number on the rear doors" class="absolute inset-0 w-full h-full object-cover object-[78%_center]" fetchpriority="high">
       <div class="hero-overlay absolute inset-0"></div>
 
       <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-24 w-full">
@@ -174,12 +189,35 @@
           <p class="mt-1 text-sm text-slate-400">Systems Installed</p>
         </div>
         <div class="reveal reveal-delay-2">
-          <p class="font-display text-3xl sm:text-4xl font-extrabold text-white">4.9<span class="text-ember-500">★</span></p>
-          <p class="mt-1 text-sm text-slate-400">Average Rating</p>
+          <p class="font-display text-3xl sm:text-4xl font-extrabold text-white">5.0<span class="text-ember-500">★</span></p>
+          <p class="mt-1 text-sm text-slate-400">Google rating</p>
         </div>
         <div class="reveal reveal-delay-3">
           <p class="font-display text-3xl sm:text-4xl font-extrabold text-white"><span data-count="100">0</span>%</p>
           <p class="mt-1 text-sm text-slate-400">Satisfaction Guarantee</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= MASCOT ======= -->
+    <section id="mascot" class="py-24 overflow-hidden" aria-label="Ice Peak mascot">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
+        <div class="reveal order-2 lg:order-1 flex justify-center">
+          <img src="assets/mascot.jpg" alt="Ice Peak mascot Peak jumping with a wrench, ice and fire" class="mascot-figure rounded-3xl">
+        </div>
+        <div class="order-1 lg:order-2">
+          <p class="reveal text-sm font-bold tracking-[.2em] uppercase text-ice-400">Meet Peak</p>
+          <h2 class="reveal mt-3 font-display text-3xl sm:text-4xl font-extrabold text-white leading-tight">Ice by nature.<br><span class="text-gradient">Fire when you need heat.</span></h2>
+          <p class="reveal reveal-delay-1 mt-6 text-slate-300 leading-relaxed">
+            Peak is our ice-and-fire yeti — half mountain freeze, half furnace flame, always ready with a wrench. You’ll see him on our trucks around Greater Philadelphia.
+          </p>
+          <p class="reveal reveal-delay-1 mt-4 text-slate-300 leading-relaxed">
+            He’s the friendly face of Ice Peak: honest work, same-day help, and comfort in every season. The mountain badge is our mark. Peak is the one who shows up.
+          </p>
+          <a href="#contact" class="reveal reveal-delay-2 mt-8 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-ember-500 to-ember-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-ember-600/30 hover:shadow-ember-500/50 hover:-translate-y-0.5 transition-all">
+            Book a visit
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+          </a>
         </div>
       </div>
     </section>
@@ -258,43 +296,43 @@
         <div class="max-w-2xl mx-auto text-center reveal">
           <p class="text-sm font-bold tracking-[.2em] uppercase text-ice-400">Our Work</p>
           <h2 class="mt-3 font-display text-3xl sm:text-4xl font-extrabold text-white">Pride in Every Detail</h2>
-          <p class="mt-4 text-slate-400">You'll spot our fire-and-ice trucks all over Greater Philadelphia — and the workmanship behind them speaks for itself.</p>
+          <p class="mt-4 text-slate-400">You'll spot Peak and our fire-and-ice trucks all over Greater Philadelphia — and the workmanship behind them speaks for itself.</p>
         </div>
 
         <div class="mt-14 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
           <figure class="gallery-item reveal group relative overflow-hidden rounded-2xl border border-white/10 cursor-pointer sm:col-span-2 lg:col-span-2 lg:row-span-2">
-            <img src="assets/work-van.jpg" alt="Ice Peak Heating & Cooling fleet van with custom fire and ice wrap" class="w-full h-full object-cover min-h-[260px]" loading="lazy">
+            <img src="assets/van-hero.jpg" alt="Ice Peak van from the side and rear with mascot wrap and phone number" class="w-full h-full object-cover min-h-[260px]" loading="lazy">
             <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/95 to-transparent p-5 pt-14">
               <p class="font-display font-bold text-white">The Ice Peak Fleet</p>
-              <p class="text-sm text-slate-300">Fully stocked trucks, ready for same-day service</p>
+              <p class="text-sm text-slate-300">Peak on the wrap — ready for same-day service</p>
             </figcaption>
           </figure>
 
           <figure class="gallery-item reveal reveal-delay-1 group relative overflow-hidden rounded-2xl border border-white/10 cursor-pointer">
-            <img src="assets/work-residential-ac.jpg" alt="Residential AC condenser service with Ice Peak gauges and tools at a home" class="w-full h-56 object-cover" loading="lazy">
+            <img src="assets/van-rear.jpg" alt="Rear of the Ice Peak van with mascot, logo, phone, and website" class="w-full h-56 object-cover" loading="lazy">
             <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/95 to-transparent p-4 pt-10">
-              <p class="text-sm font-semibold text-white">Residential AC service</p>
+              <p class="text-sm font-semibold text-white">Catch us from behind</p>
             </figcaption>
           </figure>
 
           <figure class="gallery-item reveal reveal-delay-2 group relative overflow-hidden rounded-2xl border border-white/10 cursor-pointer">
-            <img src="assets/work-rooftop.jpg" alt="Ice Peak commercial rooftop HVAC unit undergoing repair in Philadelphia" class="w-full h-56 object-cover" loading="lazy">
+            <img src="assets/van-side.jpg" alt="Side of the Ice Peak van with the ice-and-fire mascot and logo" class="w-full h-56 object-cover" loading="lazy">
             <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/95 to-transparent p-4 pt-10">
-              <p class="text-sm font-semibold text-white">Commercial rooftop work</p>
+              <p class="text-sm font-semibold text-white">Peak on every truck</p>
             </figcaption>
           </figure>
 
           <figure class="gallery-item reveal reveal-delay-1 group relative overflow-hidden rounded-2xl border border-white/10 cursor-pointer">
-            <img src="assets/work-install.jpg" alt="Ice Peak van on site for a brand-new AC condenser installation at a home" class="w-full h-56 object-cover" loading="lazy">
+            <img src="assets/van-side-phone.jpg" alt="Ice Peak mascot van at a home for a new system install" class="w-full h-56 object-cover" loading="lazy">
             <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/95 to-transparent p-4 pt-10">
               <p class="text-sm font-semibold text-white">New system installs</p>
             </figcaption>
           </figure>
 
           <figure class="gallery-item reveal reveal-delay-2 group relative overflow-hidden rounded-2xl border border-white/10 cursor-pointer">
-            <img src="assets/work-emblem.jpg" alt="Close-up of the Ice Peak HVAC emblem on a service van" class="w-full h-56 object-cover" loading="lazy">
+            <img src="assets/work-rooftop.jpg" alt="Peak the Ice Peak mascot servicing commercial rooftop AC units" class="w-full h-56 object-cover" loading="lazy">
             <figcaption class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-navy-950/95 to-transparent p-4 pt-10">
-              <p class="text-sm font-semibold text-white">A brand built on trust</p>
+              <p class="text-sm font-semibold text-white">Commercial rooftop work</p>
             </figcaption>
           </figure>
         </div>
@@ -306,7 +344,7 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-14 items-center">
         <div class="reveal relative order-2 lg:order-1">
           <div class="absolute -inset-4 bg-gradient-to-br from-ice-500/20 to-ember-500/20 rounded-3xl blur-2xl" aria-hidden="true"></div>
-          <img src="assets/work-install.jpg" alt="Ice Peak Heating & Cooling van at a customer's home during a new AC installation" class="relative rounded-3xl border border-white/10 shadow-2xl w-full object-cover" loading="lazy">
+          <img src="assets/van-side-phone.jpg" alt="Ice Peak van with mascot wrap, phone number, and website parked on a neighborhood street" class="relative rounded-3xl border border-white/10 shadow-2xl w-full object-cover" loading="lazy">
           <div class="absolute -bottom-6 right-2 sm:-right-6 flex items-center gap-3 rounded-2xl border border-white/10 ring-1 ring-ice-400/20 bg-navy-950/90 backdrop-blur-md px-4 py-3 shadow-2xl shadow-black/60">
             <img src="assets/logo.png" alt="" aria-hidden="true" class="w-12 sm:w-14 shrink-0 drop-shadow-[0_2px_10px_rgba(56,189,248,.35)]">
             <div class="pr-1 leading-tight">
@@ -336,41 +374,58 @@
       </div>
     </section>
 
-    <!-- ======= TESTIMONIALS ======= -->
-    <section id="testimonials" class="py-24 bg-navy-900/50 border-y border-white/5" aria-label="Customer reviews">
+    <!-- ======= GOOGLE REVIEWS ======= -->
+    <section id="testimonials" class="py-24 bg-navy-900/50 border-y border-white/5" aria-label="Google reviews">
       <div class="max-w-7xl mx-auto px-4 sm:px-6">
         <div class="max-w-2xl mx-auto text-center reveal">
-          <p class="text-sm font-bold tracking-[.2em] uppercase text-ice-400">Reviews</p>
+          <p class="text-sm font-bold tracking-[.2em] uppercase text-ice-400">Google reviews</p>
           <h2 class="mt-3 font-display text-3xl sm:text-4xl font-extrabold text-white">What Your Neighbors Say</h2>
+          <p class="mt-4 text-slate-400">Pulled from our Google Business listing in Feasterville-Trevose. No made-up quotes.</p>
         </div>
 
-        <div class="mt-14 grid md:grid-cols-3 gap-6">
-          <figure class="reveal rounded-2xl border border-white/10 bg-navy-900/70 p-8 flex flex-col">
-            <div class="text-ember-500 text-lg tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote class="mt-4 text-slate-300 leading-relaxed flex-1">"Our AC died during the July heat wave with a newborn in the house. Ice Peak had a tech here in 40 minutes and a new unit running the next morning. I'll never call anyone else."</blockquote>
-            <figcaption class="mt-6 flex items-center gap-3">
-              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-ice-500 to-navy-600 flex items-center justify-center font-display font-bold text-white">MK</div>
-              <div><p class="font-semibold text-white text-sm">Maria K.</p><p class="text-xs text-slate-500">Fishtown</p></div>
-            </figcaption>
-          </figure>
+        <div class="mt-12 grid lg:grid-cols-2 gap-8 items-start">
+          <div>
+            <div class="reveal rounded-2xl border border-white/10 bg-navy-900/70 p-8 text-center">
+              <p class="font-display text-5xl font-extrabold text-white">5.0<span class="text-ember-500">★</span></p>
+              <p class="mt-2 text-slate-300">Based on <strong class="text-white">2 Google reviews</strong></p>
+              <p class="mt-1 text-xs text-slate-500">Reviews from Google · Ice Peak Heating and Cooling</p>
+              <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+                <a href="https://search.google.com/local/reviews?placeid=ChIJu3FdAb6txokRi_BNCQXc2YM" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-2 rounded-full border border-ice-400/40 px-5 py-2.5 text-sm font-semibold text-ice-300 hover:bg-ice-400/10 transition-colors">Read on Google</a>
+                <a href="https://search.google.com/local/writereview?placeid=ChIJu3FdAb6txokRi_BNCQXc2YM" target="_blank" rel="noopener noreferrer" class="inline-flex justify-center items-center gap-2 rounded-full bg-gradient-to-r from-ember-500 to-ember-600 px-5 py-2.5 text-sm font-semibold text-white hover:shadow-ember-500/50 hover:-translate-y-0.5 transition-all">Write a review</a>
+              </div>
+            </div>
 
-          <figure class="reveal reveal-delay-1 rounded-2xl border border-white/10 bg-navy-900/70 p-8 flex flex-col">
-            <div class="text-ember-500 text-lg tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote class="mt-4 text-slate-300 leading-relaxed flex-1">"Three companies quoted us for a heat pump. Ice Peak was the only one that explained the rebates, sized the system properly, and left the basement cleaner than they found it. Bills dropped 30%."</blockquote>
-            <figcaption class="mt-6 flex items-center gap-3">
-              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-ember-500 to-navy-600 flex items-center justify-center font-display font-bold text-white">DR</div>
-              <div><p class="font-semibold text-white text-sm">Darnell R.</p><p class="text-xs text-slate-500">Mt. Airy</p></div>
-            </figcaption>
-          </figure>
+            <div class="mt-6 grid sm:grid-cols-2 gap-4">
+              <figure class="reveal rounded-2xl border border-white/10 bg-navy-900/70 p-6">
+                <div class="text-ember-500 tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="mt-3 text-sm text-slate-400">5-star rating on Google</p>
+                <figcaption class="mt-4">
+                  <p class="font-semibold text-white text-sm">Tetyana Melnyk</p>
+                  <p class="text-xs text-slate-500">Google · last week</p>
+                </figcaption>
+              </figure>
+              <figure class="reveal reveal-delay-1 rounded-2xl border border-white/10 bg-navy-900/70 p-6">
+                <div class="text-ember-500 tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
+                <p class="mt-3 text-sm text-slate-400">5-star rating on Google</p>
+                <figcaption class="mt-4">
+                  <p class="font-semibold text-white text-sm">Nazar Khokhlov</p>
+                  <p class="text-xs text-slate-500">Google · last week</p>
+                </figcaption>
+              </figure>
+            </div>
+          </div>
 
-          <figure class="reveal reveal-delay-2 rounded-2xl border border-white/10 bg-navy-900/70 p-8 flex flex-col">
-            <div class="text-ember-500 text-lg tracking-widest" aria-label="5 out of 5 stars">★★★★★</div>
-            <blockquote class="mt-4 text-slate-300 leading-relaxed flex-1">"Honest, punctual, and no upselling. The tech showed me exactly what was wrong with our furnace, fixed it for a fair price, and gave tips to avoid the issue next winter. Rare these days."</blockquote>
-            <figcaption class="mt-6 flex items-center gap-3">
-              <div class="w-11 h-11 rounded-full bg-gradient-to-br from-ice-400 to-ember-600 flex items-center justify-center font-display font-bold text-white">SC</div>
-              <div><p class="font-semibold text-white text-sm">Susan C.</p><p class="text-xs text-slate-500">South Philly</p></div>
-            </figcaption>
-          </figure>
+          <div class="reveal reveal-delay-1 rounded-2xl overflow-hidden border border-white/10 min-h-[320px]">
+            <iframe
+              title="Ice Peak Heating and Cooling on Google Maps"
+              src="https://www.google.com/maps?q=701+E+Pennsylvania+Blvd,+Feasterville-Trevose,+PA+19053&output=embed"
+              width="100%"
+              height="420"
+              style="border:0;"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <p class="px-4 py-3 text-xs text-slate-500 bg-navy-900">701 E Pennsylvania Blvd, Feasterville-Trevose, PA 19053</p>
+          </div>
         </div>
       </div>
     </section>
@@ -407,6 +462,10 @@
               <span class="w-11 h-11 rounded-xl bg-ice-400/10 text-ice-400 flex items-center justify-center shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></span>
               <div><p class="text-slate-500">Google</p><a href="https://www.google.com/maps/place/Ice+Peak+Heating+and+Cooling/@40.1498474,-75.0111645,17z/data=!4m6!3m5!1s0x89c6adbe015d71bb:0x83d9dc05094df08b!8m2!3d40.1498474!4d-75.0111645!16s%2Fg%2F11ntnr27qq" target="_blank" rel="noopener noreferrer" class="font-semibold text-white hover:text-ice-300">Find us on Google Maps</a></div>
             </li>
+            <li class="flex items-center gap-4">
+              <span class="w-11 h-11 rounded-xl bg-ice-400/10 text-ice-400 flex items-center justify-center shrink-0"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0zM15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg></span>
+              <div><p class="text-slate-500">Address</p><p class="font-semibold text-white">701 E Pennsylvania Blvd<br>Feasterville-Trevose, PA 19053</p></div>
+            </li>
           </ul>
         </div>
 
@@ -441,6 +500,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 py-14 grid gap-10 md:grid-cols-3">
       <div>
         <a href="#home" class="flex items-center gap-3">
+          <img src="assets/mascot.png" alt="" aria-hidden="true" class="h-14 w-auto">
           <img src="assets/logo.png" alt="Ice Peak Heating & Cooling logo" class="h-14 w-auto">
           <span class="font-display leading-tight">
             <span class="block text-white font-bold tracking-wide">ICE PEAK</span>
@@ -454,6 +514,7 @@
         <h4 class="font-display font-bold text-white text-sm uppercase tracking-wider">Quick Links</h4>
         <ul class="mt-4 space-y-2.5 text-sm text-slate-400">
           <li><a href="#services" class="hover:text-ice-300 transition-colors">Services</a></li>
+          <li><a href="#mascot" class="hover:text-ice-300 transition-colors">Meet Peak</a></li>
           <li><a href="#work" class="hover:text-ice-300 transition-colors">Our Work</a></li>
           <li><a href="#about" class="hover:text-ice-300 transition-colors">About Us</a></li>
           <li><a href="#testimonials" class="hover:text-ice-300 transition-colors">Reviews</a></li>
