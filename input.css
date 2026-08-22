@@ -56,9 +56,34 @@ body { font-family: 'Inter', sans-serif; }
   .mascot-hero { height: 28vh; right: -4%; opacity: 0.95; }
 }
 
+.promo-price {
+  font-family: Sora, sans-serif;
+  font-weight: 800;
+  font-size: clamp(2.75rem, 6vw, 4.25rem);
+  line-height: 0.95;
+  background: linear-gradient(92deg, #7DD3FC 0%, #38BDF8 40%, #FB923C 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.promo-bar {
+  background: linear-gradient(90deg, #EA580C, #F97316, #38BDF8, #F97316, #EA580C);
+  background-size: 220% 100%;
+  animation: promo-bar-move 8s linear infinite;
+}
+@keyframes promo-bar-move {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 220% 50%; }
+}
+.promo-card {
+  box-shadow: 0 24px 60px -16px rgba(234, 88, 12, 0.45), 0 0 0 1px rgba(249, 115, 22, 0.35);
+}
+
 html { scroll-padding-top: 96px; }
 @media (prefers-reduced-motion: reduce) {
   .reveal { transition: none; opacity: 1; transform: none; }
   .gallery-item img { transition: none; }
   .pulse-ring { animation: none; }
+  .promo-bar { animation: none; }
 }
