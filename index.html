@@ -5,8 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- Security: restrict where scripts/styles/forms can load from -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net; connect-src 'self' https://www.googletagmanager.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google-analytics.com; img-src 'self' data: https://www.googletagmanager.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; form-action 'none'; frame-src https://app.runacall.com https://www.google.com https://maps.google.com https://www.googletagmanager.com https://bid.g.doubleclick.net; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.googleadservices.com https://www.google.com https://googleads.g.doubleclick.net https://bzrcdn.openai.com; connect-src 'self' https://www.googletagmanager.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google-analytics.com https://bzr.openai.com https://bzrcdn.openai.com; img-src 'self' data: https://www.googletagmanager.com https://www.google.com https://www.googleadservices.com https://googleads.g.doubleclick.net https://www.google-analytics.com https://bzr.openai.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; form-action 'none'; frame-src https://app.runacall.com https://www.google.com https://maps.google.com https://www.googletagmanager.com https://bid.g.doubleclick.net; base-uri 'self'; object-src 'none'; upgrade-insecure-requests">
   <meta name="referrer" content="strict-origin-when-cross-origin">
+
+  <!-- OpenAI Ads conversion pixel -->
+  <script>
+    !function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"WmWXRM1JDqHQKybffyc8mS"});
+    document.addEventListener("click", function (e) {
+      try {
+        var el = e.target;
+        if (el && el.nodeType !== 1) el = el.parentElement;
+        var link = el && el.closest && el.closest('a[href^="tel:"]');
+        if (!link) return;
+        if (window.oaiq) oaiq("measure", "custom", { type: "custom" }, { custom_event_name: "phone_clicked" });
+      } catch (err) {}
+    }, { capture: true, passive: true });
+  </script>
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18369506508"></script>
