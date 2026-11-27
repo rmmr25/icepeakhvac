@@ -11,6 +11,7 @@
   <!-- OpenAI Ads conversion pixel -->
   <script>
     !function(w,d,s,u){if(w.oaiq)return;var q=function(){q.q.push(arguments)};q.q=[];w.oaiq=q;var j=d.createElement(s);j.async=1;j.src=u;var f=d.getElementsByTagName(s)[0];f.parentNode.insertBefore(j,f)}(window,document,"script","https://bzrcdn.openai.com/sdk/oaiq.min.js");oaiq("init",{pixelId:"WmWXRM1JDqHQKybffyc8mS"});
+    oaiq("measure", "page_viewed", { type: "contents" });
     document.addEventListener("click", function (e) {
       try {
         var el = e.target;
@@ -18,6 +19,7 @@
         var link = el && el.closest && el.closest('a[href^="tel:"]');
         if (!link) return;
         if (window.oaiq) oaiq("measure", "custom", { type: "custom" }, { custom_event_name: "phone_clicked" });
+        if (window.oaiq && !window.__ipLeadSent) { window.__ipLeadSent = true; oaiq("measure", "lead_created", { type: "customer_action" }); }
       } catch (err) {}
     }, { capture: true, passive: true });
   </script>
